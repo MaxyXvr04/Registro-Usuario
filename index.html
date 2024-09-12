@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Envío de Productos</title>
+</head>
+<body>
+    <h1>Registro para Envío de Productos</h1>
+    <form action="envio.php" method="GET">
+        <div class="form-container">
+            <div class="form-column">
+                <label for="nombre">Nombre Completo:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="direccion">Dirección de Entrega:</label><br>
+                <input type="text" id="direccion" name="direccion" required><br><br>
+
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" required><br><br>
+
+                <label for="correo">Correo Electrónico:</label><br>
+                <input type="email" id="correo" name="correo" required><br><br>
+            </div>
+            <div class="form-column">
+                <label for="notificaciones">¿Desea recibir notificaciones por correo?</label>
+                <input type="checkbox" id="notificaciones" name="notificaciones" value="Sí"><br><br>
+
+                <label>Tipo de Cliente:</label><br>
+                <input type="radio" id="particular" name="tipo_cliente" value="Particular" required>
+                <label for="particular">Particular</label><br>
+                <input type="radio" id="empresa" name="tipo_cliente" value="Empresa" required>
+                <label for="empresa">Empresa</label><br><br>
+
+                <label for="prioridad">Prioridad de Envío:</label><br>
+                <select id="prioridad" name="prioridad" required>
+                    <option value="Económico">Económico</option>
+                    <option value="Estándar">Estándar</option>
+                    <option value="Express">Express</option>
+                </select><br><br>
+
+                <label for="instrucciones">Instrucciones Especiales:</label><br>
+                <textarea id="instrucciones" name="instrucciones" rows="4" cols="50"></textarea><br><br>
+            </div>
+        </div>
+        <br><button type="submit">Enviar Información</button>
+    </form>
+</body>
+</html>
